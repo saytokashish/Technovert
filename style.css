@@ -32,48 +32,47 @@ a{
 /*--------------------------Header---------------------------------*/
 .header
 {
-    height: 150px;
     background-color:#3399cc;
-    padding-top: 40px;
-    padding-left: 30px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    
 }
 .header-content
 {
-    font-weight:40;
-    font-size:4.5em;
+    font-weight:20;
+    font-size:3em;
     color: white;
 }
 .nav
 {
-    height: 60px;
     background-color: #333333;
     display: flex;
     justify-content: space-between;
+    padding-top: 10px;
 }
 .nav-link
 {
     display: flex;  
-    padding-top: 15px;
 }
 
 .nav-link li a
 {
     color: white;
-    font-weight: 500;
-    font-size: 28px;
-    padding: 15px 35px;
+    font-weight: 80;
+    font-size: 20px;
+    padding: 10px 20px;
 }
 li a:hover 
 {
     background-color: #111;
 }
 .logo-container{
-    padding: 15px 20px;
+    padding: 10px 20px;
 }
 .logo
 {
     width:30px;
-    height: 30px;
 }
 .active
 {
