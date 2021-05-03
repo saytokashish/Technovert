@@ -1,18 +1,35 @@
-.br
-{
-    border:1px solid red;
-}
+/*-----------------------default setup---------------------------------*/
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
     font-family: 'Poppins',sans-serif;
 }
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*--------------------------common classes-------------------------------*/
+.br
+{
+    border:1px solid red;
+}
+
 .to-upper-case
 {
     text-transform: uppercase;
 }
+
+/*--------------------------Header---------------------------------*/
 .header
 {
     height: 150px;
@@ -38,13 +55,9 @@
     display: flex;  
     padding-top: 15px;
 }
-.nav-link li
-{
-    list-style: none;
-}
+
 .nav-link li a
 {
-    text-decoration: none;
     color: white;
     font-weight: 500;
     font-size: 28px;
