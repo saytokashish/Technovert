@@ -23,6 +23,9 @@ a{
 {
     border:1px solid red;
 }
+.cbr{
+    border: solid cyan 1px;
+}
 
 .to-upper-case
 {
@@ -40,8 +43,8 @@ a{
 }
 .header-content
 {
-    font-weight:20;
-    font-size:3em;
+    font-weight:5;
+    font-size:46px;
     color: white;
 }
 .nav
@@ -49,26 +52,26 @@ a{
     background-color: #333333;
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
+    height: 40px;
 }
 .nav-link
 {
-    display: flex;  
+    display: flex;
 }
-
 .nav-link li a
 {
+    display: block;
     color: white;
-    font-weight: 80;
-    font-size: 20px;
-    padding: 10px 20px;
+    font-weight: 120;
+    font-size: 15px;
+    padding: 11px 20px;
 }
 li a:hover 
 {
     background-color: #111;
 }
 .logo-container{
-    padding: 10px 20px;
+    padding-top: 5px;
 }
 .logo
 {
@@ -82,20 +85,21 @@ li a:hover
 /*------------------------------New Container-------------------------------*/
 .news
 {
-    margin-top: 30px;
+    margin-top: 23px;
     padding-left: 65px;
    display: inline-block;
 }
 .news-border
 {
     padding-right: 30px;
-    border: 2px solid gray;
-    padding-bottom: 40px;
+    border: 2px solid #d3d3d3;
+    padding-bottom: 15px;
 }
 .news-content
 {
+    font-weight: 5;
     padding-left: 15px;
-    padding-top: 30px;
+    padding-top: 15px;
 }
 .news-list
 {
@@ -105,31 +109,33 @@ li a:hover
 .news-list li
 {
     padding-left: 15px;
+    font-size: 14px;
 }
 .welcome
 {
-    height: 500px;
     margin-top: 30px;
 }
 .welcome-heading
 {
     padding-left: 60px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
+    font-weight: 18;
 }
 .welcome-first
 {
     padding-left: 60px;
     padding-bottom: 30px;
-    font-size: 22px;
+    font-size: 13px;
 }
 .welcome-second
 {
     padding-left: 60px;
     padding-bottom: 30px;
-    font-size: 22px;
+    font-size: 13px;
 }
 .welcome-third
 {
     padding-left: 60px;
-    font-size: 22px;
+    font-size: 13px;
+    padding-bottom: 50px;
 }
