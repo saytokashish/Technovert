@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technovert</title>
     <link rel="stylesheet" href="style1.css">
 </head>
-
 <body>
     <div class="header">
         <h1 class="header-content to-upper-case ">Technovert</h1>
@@ -45,12 +43,29 @@
             </div>
             <div class="">
                 <label for="name">Upload Resume</label>
-                <input type="file" name="" id="" hidden="hidden">
+                <input type="file" name="" id="real_file" hidden="hidden">
                 <span id="custom_text" class="box "> No file choosen yet</span>
                 <button type="button" id="custom_button">Browse...</button>
             </div>
         </form>
         <button class="btn" type="submit" >Submit</button>
     </div>
+    <script>
+        const realFileBtn=document.getElementById("real_file");
+        const customBtn=document.getElementById("custom_button");
+        const customTxt=document.getElementById("custom_text");
+
+        customBtn.addEventListener("click",function(){
+            realFileBtn.click();
+        });
+        realFileBtn.addEventListener("change", function(){
+            if(realFileBtn.value){
+                customTxt.innerHTML=realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+            }
+            else{
+                customTxt.innerHTML="No file chosen, yet";
+            }
+        });
+    </script>
 </body>
 </html>
