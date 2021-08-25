@@ -28,18 +28,21 @@
             their heart into it. If you are one, we would like to talk to you. Please
             fill the form below and we will get back to you.
         </p>
-        <form class="" action="">
+        <form class="" action="#" onsubmit="return validation()">
             <div class="field">
                 <label for="name">Name</label>
                 <input class="input-field" type="text" name="" id="name">
+                <span id="username" class="validate"></span>
             </div>
             <div class="field">
                 <label for="name">Email</label>
                 <input class="input-field" type="text" name="" id="email">
+                <span id="emai" class="validate"></span>
             </div>
             <div class="field">
                 <label for="name">Desired Role</label>
-                <input class="input-field" type="text" name="" id="email">
+                <input class="input-field" type="text" name="" id="drole">
+                <span id="role" class="validate"></span>
             </div>
             <div class="">
                 <label for="name">Upload Resume</label>
@@ -47,10 +50,57 @@
                 <span id="custom_text" class="box "> No file choosen yet</span>
                 <button type="button" id="custom_button">Browse...</button>
             </div>
+            <input type="submit" value="Submit" name="submit">
         </form>
-        <button class="btn" type="submit" >Submit</button>
+        <!-- <button class="btn" type="submit" >Submit</button> -->
+       
     </div>
     <script>
+        function validation(){
+            var user = document.getElementById('name').value;
+            if(user=="")
+            {
+                document.getElementById('username').innerHTML="*Please enter your name";
+                return false;
+            }
+            if((user.length<=2)||(user.length>20))
+            {
+                document.getElementById('username').innerHTML="*UserName length must be between 2 and 20";
+                return false;
+            }
+            if(!isNaN(user))
+            {
+                document.getElementById('username').innerHTML="*Only characters are allowed";
+                return false;
+            }
+
+            var email = document.getElementById('email').value;
+            if(email=="")
+            {
+                document.getElementById('emai').innerHTML="*Please enter your mail-id";
+                return false;
+            }
+            if(email.indexOf('@')<=0)
+            {
+                document.getElementById('emai').innerHTML="* @ position is invalid";
+                return false;
+            }
+            if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.'))
+            {
+                document.getElementById('emai').innerHTML="* . position is invalid";
+                return false;
+            }
+
+            var role = document.getElementById('drole').value;
+            if(role=="")
+            {
+                document.getElementById('role').innerHTML="*Please enter your desired role";
+                return false;
+            }
+
+
+        }
+
         const realFileBtn=document.getElementById("real_file");
         const customBtn=document.getElementById("custom_button");
         const customTxt=document.getElementById("custom_text");
